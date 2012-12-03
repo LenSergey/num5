@@ -1,5 +1,6 @@
 package ru.len.num5.figure;
-
+import java.util.*;
+import java.text.*;
 /**
  * Класс-ромб.
  * Задается 2 параметрами - стороной(a) и диагональю(d).
@@ -66,6 +67,11 @@ public class Rhomb extends Figure{
      
     @Override
     public String toString(){
-        return "id="+this.getId()+", "+this.getName()+", сторона="+this.getSide()+", первая диагональ="+this.getDiag1()+", вторая диагональ" +Math.round(this.getDiag2()*100)/100f+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f;
+        return "id="+this.getId()+", "+this.getName()+", сторона="+this.getSide()+", первая диагональ="+this.getDiag1()+", вторая диагональ" +Math.round(this.getDiag2()*100)/100f+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f+", дата создания "+this.getDate();
     }     
+    
+    @Override
+    public String getDate() {
+        return date;
+    }
 }

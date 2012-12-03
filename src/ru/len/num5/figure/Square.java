@@ -56,7 +56,12 @@ public class Square extends Figure {
     
     @Override
     public String toString(){
-        return "id="+this.getId()+", "+this.getName()+", сторона="+this.getSide()+",диагональ="+Math.round(getDiag()*100)/100f+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f;
+        return "id="+this.getId()+", "+this.getName()+", сторона="+this.getSide()+",диагональ="+Math.round(getDiag()*100)/100f+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f+", дата создания "+this.getDate();
     }    
+    
+    @Override
+    public String getDate() {
+        return date;
+    }
 }
 

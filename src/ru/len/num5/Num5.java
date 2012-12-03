@@ -91,16 +91,19 @@ public class Num5 {
             System.out.println("4 - сортировка по убыванию имени");
             System.out.println("5 - сортировка по наибольшей стороне по возрастанию");
             System.out.println("6 - сортировка по наибольшей стороне по убыванию");
+            System.out.println("7 - сортировка по дате по возрастанию");
+            System.out.println("8 - сортировка по дате по убыванию");
             System.out.println("----------------------------------------------");
             String mode = n.next(); // читаем строку из буфера ввода
-            if (mode.equals("q")) break; // прерываем цикл, если строка пустая    
+            if (mode.equals("q")) break; // прерываем цикл, если q    
             else if(mode.equals("0")){
                 init();
             }  
-            else { boolean sortUp = mode.equals("2")||mode.equals("4")||mode.equals("6");
+            else { boolean sortUp = mode.equals("2")||mode.equals("4")||mode.equals("6")||mode.equals("8");
                 int sortMode=0;
                 if (mode.equals("3")||mode.equals("4")) sortMode=1;
                 else if (mode.equals("5")||mode.equals("6")) sortMode=2;
+                     else if (mode.equals("7")||mode.equals("8")) sortMode=3;
                 Collections.sort(list,new SortMode(sortUp,sortMode));
                 for(Figure f: list){
                     System.out.println(f);

@@ -35,9 +35,13 @@ public class SortMode implements Comparator<Figure>{
             res=f1.getName().compareTo(f2.getName());
         }
         
-        else {
+        else if (sortMode==2){
             if (f1.getMax()>f2.getMax()) res=1;
             else if (f1.getMax()<f2.getMax()) res=-1;
+        }
+        
+        else {
+            res=f1.getDate().compareTo(f2.getDate());
         }
         
         if (sortUp) res*=(-1);

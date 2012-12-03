@@ -60,6 +60,11 @@ public class Semicircle extends Figure {
     
     @Override
     public String toString(){
-        return "id="+this.getId()+", "+this.getName()+", радиус="+this.getR()+", длина дуги="+Math.round(this.getArc()*100)/100f+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f;
-    }    
+        return "id="+this.getId()+", "+this.getName()+", радиус="+this.getR()+", длина дуги="+Math.round(this.getArc()*100)/100f+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f+", дата создания "+this.getDate();
+    }  
+    
+    @Override
+    public String getDate() {
+        return date;
+    }
 }

@@ -93,6 +93,11 @@ public class Trapeze extends Figure{
   
     @Override
     public String toString(){
-        return "id="+this.getId()+", "+this.getName()+", нижнее основание="+this.down+", левая боковая="+this.left+", верхнее основание="+this.up+", правая боковая="+Math.round(this.getRight()*100)/100f+", высота ="+this.getH()+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f;
+        return "id="+this.getId()+", "+this.getName()+", нижнее основание="+this.down+", левая боковая="+this.left+", верхнее основание="+this.up+", правая боковая="+Math.round(this.getRight()*100)/100f+", высота ="+this.getH()+", периметр="+Math.round(this.per()*100)/100f+", площадь="+Math.round(this.area()*100)/100f+", дата создания "+this.getDate();
+    }
+    
+    @Override
+    public String getDate() {
+        return date;
     }
 }
